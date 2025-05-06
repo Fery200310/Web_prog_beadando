@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termék Kezelés</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark retro-navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Movie Figures</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="termekek.html">Termékek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arlista.html">Árlista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="termekm.html">Termék Kezelés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bejelentkezes.html" id="beMenu">Bejelentkezés</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="form-container">
+            <h1>Új Termék Hozzáadása</h1>
+            <form id="productForm" onsubmit="return validateProductForm(event)">
+                <div class="form-group">
+                    <label for="productName">Termék neve:</label>
+                    <input type="text" id="productName" name="productName" class="form-control" required>
+                    <div class="error-message" id="productNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productCategory">Kategória:</label>
+                    <select id="productCategory" name="productCategory" class="form-control" required>
+                        <option value="">Válasszon kategóriát...</option>
+                        <option value="marvel">Marvel</option>
+                        <option value="dc">DC Comics</option>
+                        <option value="starwars">Star Wars</option>
+                        <option value="disney">Disney</option>
+                    </select>
+                    <div class="error-message" id="productCategoryError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPrice">Ár (Ft):</label>
+                    <input type="number" id="productPrice" name="productPrice" class="form-control" min="0" required>
+                    <div class="error-message" id="productPriceError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productStock">Készlet:</label>
+                    <input type="number" id="productStock" name="productStock" class="form-control" min="0" required>
+                    <div class="error-message" id="productStockError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productDescription">Leírás:</label>
+                    <textarea id="productDescription" name="productDescription" class="form-control" rows="3" required></textarea>
+                    <div class="error-message" id="productDescriptionError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productImage">Kép URL:</label>
+                    <input type="url" id="productImage" name="productImage" class="form-control" required>
+                    <div class="error-message" id="productImageError"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Termék Hozzáadása</button>
+            </form>
+            <div id="formResult" class="mt-3"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="form.js"></script>
+</body>
+</html> 
