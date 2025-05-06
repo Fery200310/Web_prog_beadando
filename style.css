@@ -25,6 +25,28 @@
     padding: 20px;
     display: flex;
     height: 100vh;
+    gap: 20px; /* Add spacing between form and images */
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column; /* Visszaállítva függőleges elrendezésre */
+    gap: 15px; /* Távolság a képek között */
+    margin-left: auto; /* Jobbra igazítás */
+    margin-top: 20px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
 }
 
 body {
@@ -68,6 +90,7 @@ body {
     gap: 20px;
     padding: 0 20px;
 }
+
 
 .hero-image {
     flex: 1;
@@ -193,13 +216,14 @@ body {
 }
 
 .product-image {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    background-color: #000;
+    width: 100%; /* Visszaállítva teljes szélességre */
     border-radius: 10px;
-    margin-bottom: 15px;
-    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05); /* Hover effektus megtartva */
 }
 
 .product-info {
@@ -269,6 +293,18 @@ body {
     display: none !important;
 }
 
+#bejelentkezes-container {
+    position: relative;
+    z-index: 1;
+    height: 100vh; /* Teljes magasság */
+    width: 100%; /* Teljes szélesség */
+    background: none; /* Háttérképek eltávolítása */
+    display: flex; /* Align login form and text content side by side */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Adjusted for alignment after removing login-info */
+}
+
 #bejelentkezes,
 #regisztracio {
     display: flex;
@@ -280,6 +316,19 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bejelentkezes {
+    position: absolute; /* Changed to absolute for centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for element's own dimensions */
+    z-index: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50vh;
 }
 
 #bejelentkezes input,
@@ -310,4 +359,40 @@ body {
     color: red;
     font-size: 1em;
     margin-top: 10px;
+}
+
+.form-container h1 {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.form-container button {
+    margin-top: 20px; 
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto; 
+}
+
+.center-text {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', monospace;
+    color: #333;
+}
+
+.center-text h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.center-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
 }
