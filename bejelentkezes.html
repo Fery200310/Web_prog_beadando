@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5. oldal</title>
+    <title>Bejelentkezés</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
                         <a class="nav-link" href="4.html">4. oldal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="5.html">5. oldal</a>
+                        <a class="nav-link" href="bejelentkezes.html" id="beMenu">Bejelentkezés</a>
                     </li>
                 </ul>
             </div>
@@ -35,9 +35,26 @@
     </nav>
 
     <div class="content">
-        <h1>5. oldal</h1>
-    </div>
+        <div id="bejelentkezes">
+            <h1>Bejelentkezés</h1>
+            <input type="email" name="beEmail" id="beEmail" placeholder="E-mail">
+            <input type="password" name="bePass" id="bePass" placeholder="Jelszó">
+            <input type="button" value="Bejelentkezés" id="BeBtn">
+            <p><a href="#" id="showRegister">Regisztráció</a></p>
+        </div>
 
+        <div id="regisztracio" class="hidden">
+            <h1>Regisztráció</h1>
+            <input type="text" name="regName" id="regName" placeholder="Név">
+            <input type="email" name="regEmail" id="regEmail" placeholder="E-mail">
+            <input type="password" name="regPass" id="regPass" placeholder="Jelszó">
+            <input type="password" name="regPassConfirm" id="regPassConfirm" placeholder="Jelszó megerősítése">
+            <input type="button" value="Regisztráció" id="RegBtn">
+            <p><a href="#" id="showLogin">Már van fiókja? Bejelentkezés</a></p>
+            <div id="regMessage" class="message"></div>
+        </div>
+    </div>
+    </div>
+    <script src="bejelentkezes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 </html>
